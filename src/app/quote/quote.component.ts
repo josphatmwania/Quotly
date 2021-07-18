@@ -10,9 +10,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
 
   quotes:Quote[ ] =[
-      new Quote('Procastination is the thief of time','Edward Young ', 'Me',  new Date(2020, 4, 14), 0,0),
-      new Quote('Dont be a slave to your emotion.Control them','Buddha', 'Me',  new Date(2020, 4, 14),0,0)
+      new Quote('Productivity is being able to do things that you were never able to do before' 'Franz Kafka', 'Me',  new Date(2021, 7, 18), 0,0),
+      new Quote('Dont be a slave to your emotion.Control them','Buddha', 'Me',  new Date(2021, 7, 17),0,0)
   ];
+
+
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
