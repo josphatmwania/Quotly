@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-@Component({
-  selector: 'app-quote-form',
-  templateUrl: './quote-form.component.html',
-  styleUrls: ['./quote-form.component.css']
-})
-export class QuoteFormComponent implements OnInit {
+import { QuoteFormComponent } from './quote-form.component';
 
-  constructor() { }
+describe('QuoteFormComponent', () => {
+  let component: QuoteFormComponent;
+  let fixture: ComponentFixture<QuoteFormComponent>;
 
-  ngOnInit(): void {
-  }
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ QuoteFormComponent ]
+    })
+    .compileComponents();
+  }));
 
-}
+  beforeEach(() => {
+    fixture = TestBed.createComponent(QuoteFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

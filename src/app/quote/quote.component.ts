@@ -15,6 +15,7 @@ export class QuoteComponent implements OnInit {
   ];
 
 
+// Adding new quotes 
 
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
@@ -27,6 +28,8 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
     
   }
+  
+// Deleting a quote 
 
   deleteQuote(isComplete, index){
     if (isComplete){
