@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <ul *ngFor='let quote of quotes'>
+                <div>
+                    <li>{{quote.quote}}</li>
+                    <app-quote-details [details]='quote'></app-quote-details>
+                </div>
+            </ul>
+            
+        </div>
+    </div>
+</div>
