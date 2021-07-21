@@ -1,13 +1,16 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <ul *ngFor='let quote of quotes'>
+            <ul *ngFor='let quote of quotes; let i=index'>
                 <div>
                     <li>{{quote.quote}}</li>
-                    <app-quote-details [details]='quote'></app-quote-details>
+                    <app-quote-details [details]='quote'(isToDelete)='deleteQuote($event, i)'></app-quote-details>
                 </div>
             </ul>
             
+        </div>
+        <div class="col-md-6">
+            <app-quote-form></app-quote-form>
         </div>
     </div>
 </div>

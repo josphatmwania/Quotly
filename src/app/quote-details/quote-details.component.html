@@ -1,2 +1,14 @@
 <p> {{details.author}} </p>
 <p> Submitted By {{details.person}} on {{details.daysPassed |date }}({{details.daysPassed|daysCount}} days ago.)  </p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <button class="btn btn-primary" (click)='upVote()'>Upvote {{upvote}} </button>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary" (click)='downVote()'>Downvote {{downvote}}</button>
+        </div>
+    </div>
+    <button class="btn btn-outline-danger" style="margin-top: 10px; width: 150px; height: 55px; font-size: 24px;" (click)='toDelete(true)' >Delete</button>
+</div>
+

@@ -15,6 +15,15 @@ export class QuoteComponent implements OnInit {
     new Quotes('Sins should be buried like the dead. Not that they may be forgotten but we may them and find our way forward nonetheless.','Raymond Reddington', 'Josphat Mwania', new Date(2020,7,25 )),
     
   ]
+
+  deleteQuote(event:boolean, index:number){
+    let isTrue = confirm('Are you sure you want to delete this Quote?')
+
+    if (isTrue) {
+      this.quotes.splice(index, 1)
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
