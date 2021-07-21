@@ -16,7 +16,7 @@ To view the page click on the link below
 https://github.com/josphatmwania.github.io/Quotly/
 
 # Technologies Used
-- Angular CLI
+- Angular
 - Javascript
 - Typescript
 - CSS
