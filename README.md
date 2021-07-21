@@ -13,7 +13,7 @@ You can also be able to see already existing and their author and can upvote and
 - Run ng serve from your terminal
 # Live Demo
 To view the page click on the link below
-https://github.com/josphatmwania.github.io/Quotly/
+
 
 # Technologies Used
 - Angular
