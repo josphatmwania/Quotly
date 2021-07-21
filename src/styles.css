@@ -10,7 +10,10 @@ body{
     padding-left: 170px;
     padding-right: 170px;
     padding-top: 100px;
-    background-color: rgb(231, 183, 183);
+    background-color: rgb(14, 1, 1);
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
     
 }
