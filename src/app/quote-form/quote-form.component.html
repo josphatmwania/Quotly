@@ -1,12 +1,22 @@
-<form>
+<form #quoteForm='ngForm' (ngSubmit)='submiQuote();  quoteForm.resetForm({})'>
     <div class="form-group">
-        <textarea name="quote" id="quote" cols="30" rows="10" class="form-control" placeholder="Enter quote..."></textarea>
+        <textarea [(ngModel)]='newQuotes.quote' name="quote" #quote='ngModel'  id="quote" cols="30" rows="10" class="form-control" placeholder="Enter quote..." required></textarea>
+    </div>
+    <div class="alert alert-danger" [hidden]='quote.valid||quote.pristine'>
+        <p>Must Enter A Quote</p>
     </div>
     <div class="form-group">
-        <input type="text" class="form-control" id="author" placeholder="Author">
+        <input type="text" class="form-control" id="author" placeholder="Author" [(ngModel)]='newQuotes.author' name="author" #author='ngModel' required>
+    </div>    
+    <div class="alert alert-danger" [hidden]='author.valid||author.pristine'>
+        <p>Must enter An Author</p>
     </div>
+
     <div class="form-group">
-        <input type="text" class="form-control" id="contributor" placeholder="Contributor">
+        <input type="text" class="form-control" id="contributor" placeholder="Contributor" [(ngModel)]='newQuotes.person' name="contributor" #contributor='ngModel' required>
+    </div>
+    <div class="alert alert-danger" [hidden]='contributor.valid||contributor.pristine'>
+        <p>Must Enter Your Name</p>
     </div>
     <button class="btn btn-success">POST QUOTE</button>
 </form>
